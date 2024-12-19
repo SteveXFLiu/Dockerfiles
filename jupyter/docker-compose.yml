@@ -1,0 +1,12 @@
+services:
+  jupyter:
+    image: jupyter:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - type: "bind"
+        source: "."
+        target: "/home/workspace"
+    environment:
+      - JUPYTER_TOKEN=jupyter
+    command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
