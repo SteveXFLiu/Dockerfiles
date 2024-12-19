@@ -11,6 +11,12 @@ COPY scripts/requirements.txt /init_scripts/requirements.txt
 COPY scripts/install_python.sh /init_scripts/install_python.sh
 RUN /init_scripts/install_python.sh
 
+COPY scripts/install_pandoc.sh /init_scripts/install_pandoc.sh
+RUN /init_scripts/install_pandoc.sh
+
+COPY scripts/install_quarto.sh /init_scripts/install_quarto.sh
+RUN /init_scripts/install_quarto.sh
+
 EXPOSE 8888
 
 # To run jupyter lab server automatically
