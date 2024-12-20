@@ -21,15 +21,15 @@ apt_install \
 add-apt-repository ppa:deadsnakes/ppa
 
 # Install Python
-apt_install python${PYTHON_VERSION:-3.9}
+apt_install python${PYTHON_VERSION:-3.10}
 
 # Set default Python version
-ln -sf /usr/bin/python${PYTHON_VERSION:-3.9} /usr/bin/python3
+ln -sf /usr/bin/python${PYTHON_VERSION:-3.10} /usr/bin/python3
 
 # Install and upgrade pip
-apt_install python3.9-distutils
+apt_install python${PYTHON_VERSION:-3.10}-distutils
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python3.9 get-pip.py
+python3 get-pip.py
 python3 -m pip install --upgrade pip
 
 # Install Python packages
