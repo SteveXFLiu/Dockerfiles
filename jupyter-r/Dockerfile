@@ -5,7 +5,7 @@ FROM ${ROOT_IMAGE}
 ENV LANG=en_US.UTF-8
 ENV TZ="Etc/UTC"
 
-ENV PYTHON_VERSION="3.9"
+ENV PYTHON_VERSION="3.10"
 
 COPY scripts/requirements.txt /init_scripts/requirements.txt
 COPY scripts/install_python.sh /init_scripts/install_python.sh
