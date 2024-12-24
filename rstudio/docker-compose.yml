@@ -6,7 +6,7 @@ services:
     volumes:
       - type: "bind"
         source: "."
-        target: "/home/workspace"
+        target: "/home/rstudio"
     environment:
       - DEFAULT_USER=rstudio
       - PASSWORD=rstudio
