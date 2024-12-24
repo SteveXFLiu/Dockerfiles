@@ -10,7 +10,8 @@ services:
     environment:
       - JUPYTER_TOKEN=jupyter
     command: >
-      bash -c "Rscript /init_scripts/r_jupyter_kernel.r && 
+      bash -c "cd /home/workspace &&
+      Rscript /init_scripts/r_jupyter_kernel.r && 
       jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
       
       # Only jupyter lab command for Jupyter without R
